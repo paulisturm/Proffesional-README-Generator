@@ -1,1 +1,2 @@
 # Proffesional-README-Generator
+This is a comman-line application that accepts user input. When the user is prompted for information about their application repository then a high-quality, professional README.md is generated. The README.md will include the title of their project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions. 
