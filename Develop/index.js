@@ -9,29 +9,39 @@ const questions = [
   {
     type: "input",
     message: "What is the name of your repository?",
-    name: "reponame",
+    name: "title",
   },
   {
     type: "input",
-    message: "What is the name of your repository?",
-    name: "reponame",
+    message: "Input a description of your application",
+    name: "description",
   },
   {
     type: "input",
-    message: "What is the name of your repository?",
-    name: "reponame",
+    message: "Input your application's installation instructions",
+    name: "installation",
   },
   {
     type: "input",
-    message: "What is the name of your repository?",
-    name: "reponame",
+    message: "Input your application's usage information",
+    name: "usage",
+  },
+  {
+    type: "input",
+    message: "Input instructions on how to make contributions to your application",
+    name: "contributing",
+  },
+  {
+    type: "input",
+    message: "Input information on how to test your application",
+    name: "test",
   },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     try {
-        console.log(process.cwd())
+        //console.log(process.cwd())
         fs.writeFileSync(process.cwd() +`/Develop/${fileName}`, data);
         // file written successfully
       } catch (err) {
@@ -46,8 +56,9 @@ function init() {
 
     .then((response) => {
     
-     console.log(response)
+     //console.log(response)
      var fileData = generateMarkdown(response)
+     console.log(fileData)
      writeToFile('README.md',fileData)
     }
   );
