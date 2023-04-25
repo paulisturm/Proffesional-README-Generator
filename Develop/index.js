@@ -32,7 +32,7 @@ const questions = [
 function writeToFile(fileName, data) {
     try {
         console.log(process.cwd())
-        fs.writeFileSync(process.cwd() +`/${fileName}`, data);
+        fs.writeFileSync(process.cwd() +`/Develop/${fileName}`, data);
         // file written successfully
       } catch (err) {
         console.error(err);
